@@ -447,7 +447,7 @@ public class demon{
 
     public String speak(boolean needPrint, String message){
         if(needPrint == true){
-            System.out.println(message);
+            System.out.println("Demon: " + message);
         }
         return message;
     }
