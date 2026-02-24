@@ -265,15 +265,174 @@ public class demon{
 
     }
 
-    public void setBalance(double balance) {
-        // Method used to set the balance of the demon (Dev Mode)
-        this.balance = balance;
+    public double setValue(String value, double amount, boolean needPrint) {
+        // Generalized Method to change values of the demon's stats
+        // First checks which value has been selected via a switch statement
+        // Then checks if a print statement is needed
+        // Finally returns the new value
+        double returnValue = 0;
+        switch (value) {
+
+            // Checks if the passed parameter is health
+            case "health":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of health to the given amount and prints the change
+                    this.health = amount;
+                    returnValue = this.health;
+                    System.out.println("The Demons's health has been set to " + returnValue + " points. ");
+                } else {
+                    // Changes the value of health to the given amount and does not print the change
+                    this.health = amount;
+                    returnValue = this.health;
+                }
+                break;
+
+            // Checks if the passed parameter is balance
+            case "balance":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of balance to the given amount and prints the change
+                    this.balance = amount;
+                    returnValue = this.balance;
+                    System.out.println("The Demons's balance has been set to " + returnValue + " points. ");
+                } else {
+                    // Changes the value of balance to the given amount and does not print the change
+                    this.balance = amount;
+                    returnValue = this.balance;
+                }
+                break;
+
+            // Checks if the passed parameter is bet
+            case "bet":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of bet to the given amount and prints the change
+                    this.bet = amount;
+                    returnValue = this.bet;
+                    System.out.println("The Demons's bet has been set to " + returnValue + " points. ");
+                } else {
+                    // Changes the value of bet to the given amount and does not print the change
+                    this.bet = amount;
+                    returnValue = this.bet;
+                }
+                break;
+
+            // Checks if the passed parameter is wager_total
+            case "wager_total":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of wager_total by the given amount and prints the change
+                    this.wager_total = amount;
+                    returnValue = this.wager_total;
+                    System.out.println("The Demons's wager has been increased by " + amount + " points. ");
+                } else {
+                    // Changes the value of wager_total to the given amount and does not print the change
+                    this.wager_total = amount;
+                    returnValue = this.wager_total;
+                }
+                break;
+
+            // Checks if the passed parameter is wager_temp
+            case "wager_temp":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of wager_temp to the given amount and prints the change
+                    this.wager_temp = amount;
+                    returnValue = this.wager_temp;
+                    System.out.println("The Demons's wager top up has been increased by " + returnValue + " points. ");
+                } else {
+                    // Changes the value of wager_temp to the given amount and does not print the change
+                    this.wager_temp = amount;
+                    returnValue = this.wager_temp;
+                }
+                break;
+
+            // Checks if the passed parameter is wager
+            case "wager":
+                // Checks if printing is needed
+                if (needPrint == true) {
+                    // Changes the value of wager to the given amount and prints the change
+                    this.wager = amount;
+                    returnValue = this.wager;
+                    System.out.println("The Demons's wager has been increased by " + returnValue + " points. ");
+                } else {
+                    // Changes the value of wager to the given amount and does not print the change
+                    this.wager = amount;
+                    returnValue = this.wager;
+                }
+                break;
+
+        }
+        // Simply returns the edited returnValue to be used in other processes
+        return returnValue;
     }
 
+    public int stageValue(int amount, boolean needPrint, int mode){
+        // amount is needed for all operations, except get and reset. If one of these operations is chosen, the value for amount is irrelevant to the operation.
+        int returnValue = 0;
+        // Checks which mode is selected: 1 = increase stage, 2 = decrease stage, 3 = set stage to given amount, 4 = reset stage to 0, 5 = return current stage
+        switch (mode){
+            // Case 1 would increase the stage by the given amount
+            case 1:
+                // Checks if printing is needed
+                if(needPrint == true){
+                    this.stage += amount;
+                    returnValue = this.stage;
+                    System.out.println("The Demon's stage has been increased by " + amount + " points. " + "It is now set to " + returnValue);
+                }else{
+                    this.stage += amount;
+                    returnValue = this.stage;
+                };
+                break;
+                // Case 2 would decrease the stage by the given amount
+            case 2:
+                // Checks if printing is needed
+                if(needPrint == true){
+                    this.stage -= amount;
+                    returnValue = this.stage;
+                    System.out.println("The Demon's stage has been decrease by " + amount + " points. " + "It is now set to " + returnValue);
+                }else{
+                    this.stage -= amount;
+                    returnValue = this.stage;
+                }
+                break;
+                // Case 3 would set the stage to the given amount (DEV MODE)
+            case 3:
+                // Checks if printing is needed
+                if(needPrint == true){
+                    this.stage = amount;
+                    returnValue = this.stage;
+                    System.out.println("The Demon's stage is now set to " + returnValue);
+                }else{
+                    this.stage = amount;
+                    returnValue = this.stage;
+                }
+                break;
+                // Case 4 would reset the stage to 0 (DEV MODE) THIS CASE DOES NOT USE the amount parameter
+            case 4:
+                // Checks if printing is needed
+                if(needPrint == true){
+                    this.stage = 1;
+                    returnValue = this.stage;
+                    System.out.println("The Demon's stage has been reset to " + returnValue);
+                }else{
+                    this.stage = 1;
+                    returnValue = this.stage;
+                }
+                break;
 
-    public void setHealth(int health) {
-        // Method used to set the demon's health (Dev Mode)
-        this.health = health;
+            // Simply returns the current stage
+            case 5:
+                // Checks if printing is needed
+                if(needPrint == true){
+                    returnValue = this.stage;
+                    System.out.println("The Demon's stage is currently set to " + returnValue);
+                }else{
+                    returnValue = this.stage;
+                }
+        }
+        return returnValue;
     }
 
     public void setStage(int stage) {
@@ -299,5 +458,5 @@ public class demon{
         }
         return fileName;
     }
-    public
+
 }
