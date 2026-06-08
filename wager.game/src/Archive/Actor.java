@@ -1,5 +1,5 @@
-/*
-The class which contains the main antagonist of the game demon's wager: The Demon
+package Archive;/*
+The class which contains the main antagonist of the game demon's wager: The Archive.Demon
 
  */
 
@@ -7,7 +7,7 @@ import java.lang.*;
 import java.io.*;
 
 public class Actor{
-    // Demon's values NEED to be in double, in order to have one get, change and set function for all values instead of separate ones for each value
+    // Archive.Demon's values NEED to be in double, in order to have one get, change and set function for all values instead of separate ones for each value
     private double health; // indicates the demons health, which may be necessary for some games
     private double balance; // indicates the demons balance, which may be necessary for some games
     private String name; // indicates the demons name, which can be used to prematurely end the game with a win, if used in a sentence
@@ -95,7 +95,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of health by the given amount and prints the change
                         returnValue = this.health + amount;
-                        System.out.println(this.name +"'s health has been increased by " + amount + " points. " + " The Demon's Health is now:"+ returnValue);
+                        System.out.println(this.name +"'s health has been increased by " + amount + " points. " + " The Archive.Demon's Health is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of health by the given amount and does not print the change
@@ -108,7 +108,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of health by the given amount and prints the change
                         returnValue = this.health - amount;
-                        System.out.println(this.name +" has been damaged by " + amount + " points. " + "The Demon's Health is now: " + returnValue);
+                        System.out.println(this.name +" has been damaged by " + amount + " points. " + "The Archive.Demon's Health is now: " + returnValue);
                     }
                     // Changes the value of health by the given amount and does not print the change
                     else{
@@ -125,7 +125,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of balance by the given amount and prints the change
                         returnValue = this.balance + amount;
-                        System.out.println(this.name +"'s balance has been increased by " + amount + " points. " + " The Demon's balance is now:"+ returnValue);
+                        System.out.println(this.name +"'s balance has been increased by " + amount + " points. " + " The Archive.Demon's balance is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of balance by the given amount and does not print the change
@@ -138,7 +138,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of balance by the given amount and prints the change
                         returnValue = this.balance - amount;
-                        System.out.println(this.name +"'s balance has been subtracted by" + amount + " points. " + "The Demon's balance is now: " + returnValue);
+                        System.out.println(this.name +"'s balance has been subtracted by" + amount + " points. " + "The Archive.Demon's balance is now: " + returnValue);
                     }
                     // Changes the value of balance by the given amount and does not print the change
                     else{
@@ -155,7 +155,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of bet by the given amount and prints the change
                         returnValue = this.bet + amount;
-                        System.out.println(this.name +"'s bet has been increased by " + amount + " points. " + " The Demon's bet is now:"+ returnValue);
+                        System.out.println(this.name +"'s bet has been increased by " + amount + " points. " + " The Archive.Demon's bet is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of bet by the given amount and does not print the change
@@ -168,7 +168,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of bet by the given amount and prints the change
                         returnValue = this.bet - amount;
-                        System.out.println(this.name +"'s bet has been decreased by " + amount + " points. " + "The Demon's bet is now: " + returnValue);
+                        System.out.println(this.name +"'s bet has been decreased by " + amount + " points. " + "The Archive.Demon's bet is now: " + returnValue);
                     }
                     // Changes the value of bet by the given amount and does not print the change
                     else{
@@ -185,7 +185,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager_total by the given amount and prints the change
                         returnValue = this.wager_total + amount;
-                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + " The Demon's wager is now:"+ returnValue);
+                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + " The Archive.Demon's wager is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of wager_total by the given amount and does not print the change
@@ -198,7 +198,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager_total by the given amount and prints the change
                         returnValue = this.wager_total - amount;
-                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + "The Demon's wager is now: " + returnValue);
+                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + "The Archive.Demon's wager is now: " + returnValue);
                     }
                     // Changes the value of wager_total by the given amount and does not print the change
                     else{
@@ -215,7 +215,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager_temp by the given amount and prints the change
                         returnValue = this.wager_temp + amount;
-                        System.out.println(this.name +"'s wager top up has been increased by " + amount + " points. " + " The Demon's Hwager top up is now:"+ returnValue);
+                        System.out.println(this.name +"'s wager top up has been increased by " + amount + " points. " + " The Archive.Demon's Hwager top up is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of wager_temp by the given amount and does not print the change
@@ -228,7 +228,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager_temp by the given amount and prints the change
                         returnValue = this.wager_temp - amount;
-                        System.out.println(this.name +"'s wager top up has been decreased by" + amount + " points. " + "The Demon's wager top up is now: " + returnValue);
+                        System.out.println(this.name +"'s wager top up has been decreased by" + amount + " points. " + "The Archive.Demon's wager top up is now: " + returnValue);
                     }
                     // Changes the value of wager_temp by the given amount and does not print the change
                     else{
@@ -245,7 +245,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager by the given amount and prints the change
                         returnValue = this.wager + amount;
-                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + " The Demon's wager is now:"+ returnValue);
+                        System.out.println(this.name +"'s wager has been increased by " + amount + " points. " + " The Archive.Demon's wager is now:"+ returnValue);
                     }
                     else{
                         // Changes the value of wager by the given amount and does not print the change
@@ -258,7 +258,7 @@ public class Actor{
                     if(needPrint == true){
                         // Changes the value of wager by the given amount and prints the change
                         returnValue = this.wager - amount;
-                        System.out.println(this.name +"'s wager has been decreased by " + amount + " points. " + "The Demon's wager is now: " + returnValue);
+                        System.out.println(this.name +"'s wager has been decreased by " + amount + " points. " + "The Archive.Demon's wager is now: " + returnValue);
                     }
                     // Changes the value of wager by the given amount and does not print the change
                     else{

@@ -1,6 +1,7 @@
+package Archive;
+
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 
 // This class is the basis for all cards in the game
