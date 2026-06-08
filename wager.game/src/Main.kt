@@ -1,9 +1,10 @@
 import Âctors.Demon
+import java.util.Scanner
 
-class Main {
+fun main() {
     var game = Game()
     //var player = Player()
-    var demon = Demon("Belial")
+    var demon = Demon("Belial", true)
 
 
 }

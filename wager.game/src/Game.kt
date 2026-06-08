@@ -1,9 +1,6 @@
-import Archive.Actor;
+import Archive.Actor
 
-public class Game{
-
-
-    public void addActor(Actor actor){
-
+class Game {
+    fun addActor(actor: Actor?) {
     }
 }

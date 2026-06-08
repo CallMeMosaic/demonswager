@@ -30,17 +30,23 @@ class Demon(name: String, safeMode: Boolean = false) : Actor(
                 wagerTotal = 0.0,
                 wager = 0.0
 ) {
+    // Detect OS
+    val os = System.getProperty("os.name").lowercase()
     // Wager folder file Path (Appears on Desktop for every system)
     val wagerFilePath = (System.getProperty("user.home") + "/Desktop" + "/Wagers").toString()
     // Wager folder variable
     val wagerFolder = File(wagerFilePath)
+    // Wager archive folder variable
+    val wagerArchiveFolder = File(System.getProperty("user.home") + "/.WagerArchive")
     // Wager list, contains all the files in the wager folder
     var wagerList = mutableListOf<File>()
     // Creates and archive of the wager list, which is used to restore the wager folder
     var wagerArchive = mutableListOf<File>()
 
 
-    fun init(){
+    init{
+//        wagerFolder.mkdirs()
+//        println("Wager folder created.")
         // Check if wager folder exists, if not, create it.
         if (!wagerFolder.exists())
             wagerFolder.mkdirs()
@@ -48,11 +54,15 @@ class Demon(name: String, safeMode: Boolean = false) : Actor(
         Runtime.getRuntime().addShutdownHook(Thread {
             wagerFolder.deleteRecursively()
         })
+
+        // Check for the OS so the wager Archive can be hidden even on Windows
+        if (os.contains("win"))
+            Runtime.getRuntime().exec(arrayOf("attrib", "+h", wagerArchiveFolder.absolutePath))
     }
 
-    fun addToList(file: File) {
+    fun addToList() {
         // Adds every element of the wager folder to the wagerList
-        wagerFolder.listFiles().forEach {
+        wagerFolder.listFiles()?.forEach {
             wagerList.add(it)
         }
     }

@@ -1,7 +1,4 @@
-public class Stage {
-
-
-    public void createCards(){
-
+class Stage {
+    fun createCards() {
     }
 }
