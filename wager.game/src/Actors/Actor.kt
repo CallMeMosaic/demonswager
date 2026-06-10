@@ -1,4 +1,4 @@
-package `Âctors`
+package Actors
 
 open class Actor(
     var health: Double,

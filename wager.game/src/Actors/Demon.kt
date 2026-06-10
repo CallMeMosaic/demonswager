@@ -1,4 +1,4 @@
-package `Âctors`
+package Actors
 
 /**
  * @author CallMeMosaic
@@ -60,14 +60,30 @@ class Demon(name: String, safeMode: Boolean = false) : Actor(
             Runtime.getRuntime().exec(arrayOf("attrib", "+h", wagerArchiveFolder.absolutePath))
     }
 
+
+    /**
+     * @author CallMeMosaic
+     * Adds every element found inside the wager folder to the wagerList,
+     * so the demon can reference them.
+     * O-Notation: O(n)
+     */
     fun addToList() {
-        // Adds every element of the wager folder to the wagerList
         wagerFolder.listFiles()?.forEach {
             wagerList.add(it)
         }
     }
 
+    /**
+     * @author CallMeMosaic
+     * Adds every element of the wagerList to the wagerArchive
+     * and clears the wagerList, so it can be used with new wagers.
+     * Also clears the wagerArchive priorly, so only the elements from the freshly ended
+     * round are inside it.
+     * O-Notation: O(n)
+     * @param file
+     */
     fun addToArchive(file: File) {
+        wagerArchive.clear()
         // Adds every element of the wager folder to the wager archive
         for (i in 0 until wagerList.size) {
             wagerArchive.add(wagerList[i])
@@ -78,6 +94,8 @@ class Demon(name: String, safeMode: Boolean = false) : Actor(
     fun locateSource(file: File){
         // This method is used to locate the source of a file, which is used to delete the source file if safe mode is off.
     }
+
+    fun
 
 
 }
