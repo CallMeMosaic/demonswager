@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/demonswager.iml" filepath="$PROJECT_DIR$/.idea/demonswager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemonsWager.iml" filepath="$PROJECT_DIR$/.idea/modules/DemonsWager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemonsWager.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DemonsWager.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DemonsWager.test.iml" filepath="$PROJECT_DIR$/.idea/modules/DemonsWager.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/wager.game/wager.game.iml" filepath="$PROJECT_DIR$/wager.game/wager.game.iml" />
     </modules>
   </component>

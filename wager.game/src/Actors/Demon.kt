@@ -105,7 +105,8 @@ class Demon(name: String, safeMode: Boolean = false) : Actor(
                 if (result != null) return result
                 else continue
             }
-            val result = locateFileByNameAndSize(file.name,file.length(), this.root, file.extension)
+            val result = locateFileByNameAndSize(file.name,file.length(), this.root
+                , file.extension)
             if (result != null) return result
             else return null
         }
